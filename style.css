@@ -1,0 +1,226 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d2329;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0d2329;
+    color: #fff;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    color: #fff;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-size: 32px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0d2329;
+    color: #fff;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+  }
+  
+  .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+  
+  /* DROPDOWN MENU */
+  .services {
+    position: relative; 
+  }
+  
+  .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+  }
+  
+  .dropdown li + li {
+    margin-top: 10px;
+  }
+  
+  .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+  }
+  
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+  
+  .services:hover .dropdown {
+    display: block;
+  }
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+  } 
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  /* APPLYING MEDIA QUERIES */
+  @media (max-width: 768px) {
+   .menu {
+      display:none;
+      position: absolute;
+      background-color:#0d2329;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .menu li:hover {
+      display: inline-block;
+      background-color:#4c9e9e;
+      transition: 0.3s ease;
+    }
+  
+    .menu li + li {
+      margin-top: 12px;
+    }
+  
+    input[type=checkbox]:checked ~ .menu {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .dropdown {
+      left: 50%;
+      top: 30px;
+      transform: translateX(35%);
+    }
+  
+    .dropdown li:hover {
+      background-color: #4c9e9e;
+    }
+  }
+
+/* Product Card */
+.product-card {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 20px); /* Adjusted width */
+    margin: 10px; /* Adjusted margin */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px; /* Adjusted padding */
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    width: 100%;
+    max-width: 100%; /* Adjusted max-width */
+    height: auto;
+    margin-bottom: 10px; /* Adjusted margin */
+  }
+  
+  .product-title {
+    font-size: 20px; /* Adjusted font-size */
+    margin-bottom: 8px; /* Adjusted margin */
+    color: #0d2329;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+    color: #0d2329;
+  }
+  
+  .price {
+    font-size: 16px; /* Adjusted font-size */
+    font-weight: bold;
+    margin-bottom: 8px; /* Adjusted margin */
+    color: #0d2329;
+  }
+  
+  .product-details {
+    font-size: 16px; /* Adjusted font-size */
+    font-weight: bold;
+    margin-bottom: 8px; /* Adjusted margin */
+    color: red;
+  }
+  
+  .btn-buy {
+    display: inline-block;
+    background-color: #4c9e9e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-buy:hover {
+    background-color: #367f7f;
+  }
+
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+  }
+  h2{
+    color: white;
+  }
+  h3{
+    color: white;
+  }
